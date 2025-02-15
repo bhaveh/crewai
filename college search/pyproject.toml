@@ -1,0 +1,20 @@
+[project]
+name = "could_you_please_clarify_if_this_chat_relates_to_a_crew_automation_use_case"
+version = "0.1.0"
+description = "could_you_please_clarify_if_this_chat_relates_to_a_crew_automation_use_case using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<=3.13"
+dependencies = [
+    "crewai[tools]>=0.86.0,<1.0.0"
+]
+
+[project.scripts]
+could_you_please_clarify_if_this_chat_relates_to_a_crew_automation_use_case = "could_you_please_clarify_if_this_chat_relates_to_a_crew_automation_use_case.main:run"
+run_crew = "could_you_please_clarify_if_this_chat_relates_to_a_crew_automation_use_case.main:run"
+train = "could_you_please_clarify_if_this_chat_relates_to_a_crew_automation_use_case.main:train"
+replay = "could_you_please_clarify_if_this_chat_relates_to_a_crew_automation_use_case.main:replay"
+test = "could_you_please_clarify_if_this_chat_relates_to_a_crew_automation_use_case.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

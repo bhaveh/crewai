@@ -1,0 +1,41 @@
+---
+find_scholarship_sources:
+  description: Use WebsiteSearchTool to search for websites and online platforms that
+    provide information on {target_school} {education_level} scholarships. Query parameters
+    may include 'PennState undergraduate scholarships' and similar phrases to locate
+    potential sources.
+  expected_output: A validated list of URLs that are likely to contain scholarship
+    data for {target_school} {education_level}.
+  async_execution: false
+  agent: source_finder
+gather_scholarship_data:
+  description: Scrape each URL obtained from the find_scholarship_sources task using
+    SeleniumScrapingTool or ScrapeWebsiteTool to extract comprehensive scholarship
+    details such as title, deadline, award amount, description, and additional context.
+  expected_output: A structured dataset (e.g., JSON or CSV format) containing detailed
+    scholarship information from all identified sources.
+  async_execution: false
+  agent: data_collector
+  context:
+  - find_scholarship_sources
+extract_application_criteria:
+  description: Process the collected scholarship data from the gather_scholarship_data
+    task using TXTSearchTool to isolate and extract sections detailing eligibility
+    criteria, requirements, and application guidelines.
+  expected_output: A detailed list mapping each scholarship to its respective application
+    eligibility criteria and requirements.
+  async_execution: false
+  agent: criteria_extractor
+  context:
+  - gather_scholarship_data
+generate_detailed_report:
+  description: Combine all the gathered data and extracted eligibility criteria into
+    a comprehensive report. Format the information to clearly present each scholarship's
+    details, criteria, source URL, deadlines, and any additional relevant information.
+  expected_output: A final, detailed report document (e.g., in PDF or CSV format)
+    summarizing all scholarship information with corresponding eligibility criteria
+    for {target_school} {education_level}.
+  async_execution: false
+  agent: report_generator
+  context:
+  - extract_application_criteria
