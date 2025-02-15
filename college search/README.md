@@ -1,6 +1,6 @@
-# CouldYouPleaseClarifyIfThisChatRelatesToACrewAutomationUseCase Crew
+# College Search Crew
 
-Welcome to the CouldYouPleaseClarifyIfThisChatRelatesToACrewAutomationUseCase Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+Welcome to the College Search Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
 
 ## Installation
 
@@ -22,10 +22,10 @@ crewai install
 
 **Add your `OPENAI_API_KEY` into the `.env` file**
 
-- Modify `src/could_you_please_clarify_if_this_chat_relates_to_a_crew_automation_use_case/config/agents.yaml` to define your agents
-- Modify `src/could_you_please_clarify_if_this_chat_relates_to_a_crew_automation_use_case/config/tasks.yaml` to define your tasks
-- Modify `src/could_you_please_clarify_if_this_chat_relates_to_a_crew_automation_use_case/crew.py` to add your own logic, tools and specific args
-- Modify `src/could_you_please_clarify_if_this_chat_relates_to_a_crew_automation_use_case/main.py` to add custom inputs for your agents and tasks
+- Modify `college_search/config/agents.yaml` to define your agents
+- Modify `college_search/config/tasks.yaml` to define your tasks
+- Modify `college_search/crew.py` to add your own logic, tools and specific args
+- Modify `college_search/main.py` to add custom inputs for your agents and tasks
 
 ## Running the Project
 
@@ -45,7 +45,7 @@ The could_you_please_clarify_if_this_chat_relates_to_a_crew_automation_use_case 
 
 ## Support
 
-For support, questions, or feedback regarding the CouldYouPleaseClarifyIfThisChatRelatesToACrewAutomationUseCase Crew or crewAI.
+For support, questions, or feedback regarding the College Search Crew or crewAI.
 - Visit our [documentation](https://docs.crewai.com)
 - Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
 - [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
